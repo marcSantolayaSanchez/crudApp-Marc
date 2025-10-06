@@ -32,10 +32,19 @@
             </label>
         </div>
 
-        <div class="flex items-center justify-end mt-4">
+        
+
+    <div class="flex items-center justify-end mt-3 space-x-4 pl-4 flex-nowrap whitespace-nowrap">
+
+     
+           
+                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 pl-10" href="{{ route('register') }}">
+                    {{ __('No estas registrado?') }}
+                </a>
+     
             @if (Route::has('password.request'))
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
+                    {{ __('Has olvidado tu contraseña?') }}
                 </a>
             @endif
 
@@ -43,5 +52,7 @@
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
+
+    
     </form>
 </x-guest-layout>
